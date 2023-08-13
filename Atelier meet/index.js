@@ -29,4 +29,4 @@ function creationElement(balises, text) {
     alert("ceux-ci n'est op une balise");
   }
 }
-creationElement("main", "Je suis un div");
+creationElement("l", "Je suis un div");

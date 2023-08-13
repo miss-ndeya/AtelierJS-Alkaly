@@ -124,7 +124,7 @@ form.addEventListener("submit", (e) => {
 // ------------------------------------------------
 // load event
 window.addEventListener("load", () => {
-  console.log("Dcument Charger !");
+  console.log("Document Charger !");
 });
 
 // ------------------------------------------------
@@ -132,7 +132,7 @@ window.addEventListener("load", () => {
 // const boxes = document.getElementsByClassName("box");
 const boxes = document.querySelectorAll(".box");
 boxes.forEach((box) => {
-  box.addEventListener("click", (e) => {
+  box.addEventListener("click", () => {
     box.style.transform = "scale(0.7)";
   });
 });

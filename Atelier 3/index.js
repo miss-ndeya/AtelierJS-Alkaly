@@ -18,20 +18,6 @@ btn1.addEventListener("mouseout", () => {
 
 
 
-// recuperation elements html
-
-// function insertElementInIdContainer(idcontainer, element, textnode='') {
-//     const containerElement = document.getElementById(idcontainer);
-//     if (containerElement) {
-//         const linode = 
-//     }
-// }
-
-
-
-
-
-
 
 
 
