@@ -9,26 +9,46 @@ const btn5 = document.querySelector(".btn-5");
 // animation button 1
 btn1.addEventListener("click", () => {
     mydiv.classList.toggle("border-10");
+    mydiv.classList.remove("border-15");
+    mydiv.classList.remove("border-20");
+    mydiv.classList.remove("border-25");
+    mydiv.classList.remove("border-30");
 })
 
 // animation button 2
 btn2.addEventListener("click", () => {
     mydiv.classList.toggle("border-15");
+    mydiv.classList.remove("border-10");
+    mydiv.classList.remove("border-20");
+    mydiv.classList.remove("border-25");
+    mydiv.classList.remove("border-30");
 })
 
 // animation button 3
 btn3.addEventListener("click", () => {
     mydiv.classList.toggle("border-20");
+    mydiv.classList.remove("border-15");
+    mydiv.classList.remove("border-10");
+    mydiv.classList.remove("border-25");
+    mydiv.classList.remove("border-30");
 })
 
 // animation button 4
 btn4.addEventListener("click", () => {
     mydiv.classList.toggle("border-25");
+    mydiv.classList.remove("border-15");
+    mydiv.classList.remove("border-20");
+    mydiv.classList.remove("border-10");
+    mydiv.classList.remove("border-30");
 })
 
 // animation button 1
 btn5.addEventListener("click", () => {
     mydiv.classList.toggle("border-30");
+    mydiv.classList.remove("border-15");
+    mydiv.classList.remove("border-20");
+    mydiv.classList.remove("border-25");
+    mydiv.classList.remove("border-10");
 })
 
 
