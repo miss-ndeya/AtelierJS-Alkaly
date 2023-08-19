@@ -18,22 +18,24 @@ buttons.forEach(function (button) {
 function chiffres(chiffre) {
   valeurFinal += chiffre;
   operation.value += chiffre;
-  stokerValue = chiffre;
+  stokerValue = valeurFinal;
 }
 
 function operateurs(operateur) {
     operation.value = operateur;
     valeurFinal += operateur;
-    resultals.value = stokerValue;
+    resultals.value = eval(stokerValue);
 }
 
 function suprimerTout() {
     operation.value = "";
     resultals.value = "";
+    valeurFinal = ""
 }
 
 function suprimerOperation() {
   operation.value = ""
+  valeurFinal = ""
 }
 
 function calcul() {    
