@@ -18,19 +18,30 @@
       textarea{
         resize:none;
       }
+      .messageErreur{
+        display: none;
+        color: red;
+        font-size: 14px;
+        font-weight: 800;
+        text-align: center;
+        padding: 0 ;
+        padding-top: 8px;
+        margin: 0;
+      }
     </style>
   </head>
   <body>
     <div class="container my-5">
       <div class="row align-items-center mx-auto gy-3">
         <div class="col-md-4 d-flex flex-column bg p-3 rounded-3">
-          <div class="form-group mb-2">
+          <div class="form-group mb-2 champSaisi">
             <label
               for="balise"
               class="form-control mb-1 bg-transparent border-0 p-0"
               >Saisi la balise Html</label
             >
-            <input type="text" name="balise" id="balise" class="w-100 p-1" />
+            <input type="text" name="balise" id="balise" class="col-12 p-1" />
+            <p class="messageErreur" id="messageErreur"> Desole <span id="baliseNonValid"></span> n'est pas un element HTML.</p>
           </div>
           <div class="form-group mb-3">
             <label
@@ -41,9 +52,8 @@
             <textarea
               name="contenu"
               id="contenu"
-              cols="44"
               rows="3"
-              class=""
+              class="col-12"
             ></textarea>
           </div>
           <button type="button" id="creation" class="btn-sm w-25 btn-bg text-white">

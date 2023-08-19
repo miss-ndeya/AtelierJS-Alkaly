@@ -1,0 +1,65 @@
+.titre-header1{
+ letter-spacing: 2px;
+ color: #052f5f;;
+}
+.titre-header2{
+    letter-spacing: 3px;
+    color: #818181;
+}
+nav{
+    background: linear-gradient(#035DCA,#042e5d);
+}
+nav .nav-item:hover{
+    background-color: #5c5243;
+    text-decoration: none;
+}
+.div-footer1{
+    background-color: #414856;
+}
+.div-footer2{
+    background-color: #363c48;
+}
+.h1 {
+    border-bottom: 3px double #052f5f
+}
+.a{
+    text-decoration: none;
+}
+.nav-item:hover, .a:hover{
+    text-decoration: underline;  
+}
+#calculatrice{
+    background: linear-gradient(90deg,#f1f1f1 69%,#cecece 100%);
+    border: 1px solid #052f5f;
+    box-shadow: 2px 2px 10px #03142d;
+}
+.div-result{
+    border: 1px solid #a4a4a4;
+    box-shadow: 0 0 0 #052f5f;
+    border-bottom: 2px solid #858585;
+    font-size: 43px;
+}
+#butoncalcul{
+    box-shadow: 1px 1px 8px #03142d;
+    border: 1px solid #052f5f;
+    font-size: 50px;
+    padding: 9px;
+    color: #042e5d;
+    font-weight: 600;
+    transition:all .1s ease-out;
+}
+.butoncalcul{
+    background-color: #91b4e03e;
+    transform: scale(0.99);
+    box-shadow: 0 0 0 0 #042e5d;
+}
+.text-end::placeholder{
+    color: #04275a;
+}
+
+@media (max-width: 600px) {
+    #butoncalcul{
+        font-size: 30px;
+        padding: 8px 6px;
+    }
+}
