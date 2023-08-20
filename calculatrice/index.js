@@ -31,20 +31,16 @@ function suprimerOperation() {
 function calcul() {    
     operation.value = eval(valeurFinal);
   }
-
 window.addEventListener("keydown", function(event) {
   const key = event.key;
   if (/^[0-9+\-*/.]$/.test(key)) {
-    event.preventDefault();
     chiffres(key);
+    // operateurs(key);
   }else if (key === "Enter") {
-    event.preventDefault();
     calcul();
   } else if (key === "Delete") {
-    event.preventDefault();
     suprimerOperation();
   } else if (key === "Backspace") {
-    event.preventDefault();
     suprimerTout();
   }
 });
