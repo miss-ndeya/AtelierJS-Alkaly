@@ -46,12 +46,11 @@ nav .nav-item:hover{
     padding: 9px;
     color: #042e5d;
     font-weight: 600;
-    transition:all .1s ease-out;
 }
-.butoncalcul{
+#butoncalcul:active{
     background-color: #91b4e03e;
     transform: scale(0.99);
-    box-shadow: 0 0 0 0 #042e5d;
+    border: 0;
 }
 .text-end::placeholder{
     color: #04275a;

@@ -1,20 +1,9 @@
 const operation = document.querySelector(".text-end");
 const resultals = document.querySelector(".text-start");
 const buttons = document.querySelectorAll("#butoncalcul");
-console.log(buttons);
 let stokerValue;
 let valeurFinal = 0;
 
-buttons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    button.classList.add("butoncalcul")
-    setTimeout(function () {
-      button.classList.remove("butoncalcul")
-    }, 200);
-  })
-})
-
-   
 function chiffres(chiffre) {
   valeurFinal += chiffre;
   operation.value += chiffre;
@@ -22,25 +11,26 @@ function chiffres(chiffre) {
 }
 
 function operateurs(operateur) {
-    operation.value = operateur;
-    valeurFinal += operateur;
-    resultals.value = eval(stokerValue);
+  valeurFinal += operateur;
+  operation.value = operateur;
+  resultals.value = eval(stokerValue);
 }
 
 function suprimerTout() {
     operation.value = "";
     resultals.value = "";
-    valeurFinal = ""
+    valeurFinal = ""  
 }
 
 function suprimerOperation() {
   operation.value = ""
-  valeurFinal = ""
+  valeurFinal = resultals.value
+  stokerValue = resultals.value;
 }
 
 function calcul() {    
     operation.value = eval(valeurFinal);
-}
+  }
 
 window.addEventListener("keydown", function(event) {
   const key = event.key;
