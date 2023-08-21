@@ -6,6 +6,11 @@
     letter-spacing: 3px;
     color: #818181;
 }
+.navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
 nav{
     background: linear-gradient(#035DCA,#042e5d);
 }
@@ -42,14 +47,16 @@ nav .nav-item:hover{
 #butoncalcul{
     box-shadow: 1px 1px 8px #03142d;
     border: 1px solid #052f5f;
+    border-radius: 20px;
     font-size: 50px;
-    padding: 9px;
+    /* padding: 9px; */
     color: #042e5d;
     font-weight: 600;
 }
 #butoncalcul:active{
     background-color: #91b4e03e;
     transform: scale(0.99);
+    /* transform: translateY(1px); */
     border: 0;
 }
 .text-end::placeholder{
