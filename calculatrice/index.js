@@ -1,8 +1,7 @@
 const operation = document.querySelector(".text-end");
 const resultals = document.querySelector(".text-start");
-const buttons = document.querySelectorAll("#butoncalcul");
 let stokerValue;
-let valeurFinal = 0;
+let valeurFinal = '';
 
 function chiffres(chiffre) {
   valeurFinal += chiffre;
@@ -14,7 +13,6 @@ function operateurs(operateur) {
   valeurFinal += operateur;
   operation.value = operateur;
   resultals.value = eval(stokerValue);
-  // console.log("stokerValue", stokerValue);
 }
 
 function suprimerTout() {
@@ -33,19 +31,13 @@ function suprimerOperation() {
 function calcul() {
   operation.value = eval(valeurFinal);
 }
+
 window.addEventListener("keydown", function (event) {
   const key = event.key;
   if (/^[0-9+\-*/.]$/.test(key)) {
-    if (key === '/') {
+    if (/^[+\-*/]$/.test(key)) {
       operateurs(key)
-    } else if (key === "*"){
-      operateurs(key)
-    } else if (key === "+"){
-      operateurs(key)
-    }
-    else if (key === "-"){
-      operateurs(key)
-    } else{
+    }else{
       chiffres(key);
     }
   } else if (key === "Enter") {
