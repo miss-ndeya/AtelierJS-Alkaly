@@ -28,6 +28,9 @@ function suprimerOperation() {
   stokerValue = resultals.value;
 }
 
+// le parametre rest est nous permet de dnner une parametre indefinie 
+// alors que le spread operator nous permet de fusionner des tableaux
+// \
 function calcul() {
   operation.value = eval(valeurFinal);
 }
