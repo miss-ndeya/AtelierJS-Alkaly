@@ -97,6 +97,57 @@ myfunction()
 myfunction()
 
 // ======================================
-// arguments avec les fonctions
+// les fonctions
+
+var global = 10;
 
 
+function funtion1(){
+    num = 5;
+}
+
+function function2(){
+    var valeur = "";
+    if (typeof global != "undefined") {
+        valeur+= "global: " + global;
+    }
+    if (typeof num != "undefined") {
+        valeur+= "num: " + num;
+    }
+    console.log(output);
+}
+funtion1();
+function2();
+
+// ====================================
+function test(val) {
+    if (val > 12) {
+        return "Greater than 10";
+    } else if (val < 3) {
+        return "Smaller than 5";
+    } else{
+        return "Between 5 and 10";
+    }  
+}
+test(15);
+
+// ==============================
+var noms = ["Abdel malick!", "moussa", "mbaye", "Pathe", "Baye Sall", "Ndella Ndione", "Ma Fall"];
+function score(par, strokes) {
+    if (strokes == 1) {
+        return noms[0];
+    } else if (strokes <= par - 2) {
+        return noms[1]
+    } else if (strokes == par - 1) {
+        return noms[2]
+    } else if (strokes == par) {
+        return noms[3]
+    } else if (strokes == par + 1) {
+        return noms[4]
+    } else if (strokes == par + 2) {
+        return noms[5]
+    } else if (strokes >= par + 3) {
+        return noms[6]
+    } 
+}
+console.log(score(5, 4));
