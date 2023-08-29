@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #3f5261;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    height: 100vh;
+    gap: 15px;
+}
+.container{
+    border: 1px solid #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 18px 20px;
+    width: 95%;
+    max-width: 400px;
+}
+.container #titre{
+    font-size: 30px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+.container ul{
+    margin-top: 12px;
+    padding: 0;
+    width: 100%;
+}
+.container ul li{
+    background-color: #fff;
+    margin-bottom: 2px;
+    list-style: none;
+    color: #000;
+    padding: 4px;
+}

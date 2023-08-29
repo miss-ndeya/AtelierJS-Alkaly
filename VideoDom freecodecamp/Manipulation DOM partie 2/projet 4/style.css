@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url(../images/nature.jpg) no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 40%;
+    height: 250px;
+    background-color: #5e9f188d;
+    border-radius: 15px;
+    box-shadow: 0 0 3px;
+    color: #fff;
+}
+
+#timer {
+    width: 100%;
+    font-size: 72px;
+    text-align: center;
+    margin: 0px auto;
+    padding: 35px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    margin: 0 10px;
+    border: none;
+    border-radius: 15px;
+}
+
+button i {
+    font-size: 2rem;
+    padding: 10px;
+    color: #fff;
+    width: 50px;
+}
+
+#play {
+    background-color: green;
+    border-radius: 15px;
+}
+
+#pause {
+    background-color: orange;
+    border-radius: 15px;
+}
+
+#reset {
+    background-color: red;
+    border-radius: 15px;
+}
