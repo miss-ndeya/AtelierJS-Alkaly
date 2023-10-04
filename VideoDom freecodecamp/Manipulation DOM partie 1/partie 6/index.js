@@ -2,9 +2,11 @@ document.querySelector('#sports').addEventListener('click', function(e) {
   console.log(e.target.id, " est", " cliquer");
 
   const target = e.target;
+  console.log(target);
 
   if (target.matches('li')) {
     target.style.backgroundColor = 'lightgrey'
+    target.removeAtribute('style')
   }
 })
 

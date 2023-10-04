@@ -14,6 +14,7 @@ closeBtn.addEventListener('click', function() {
 });
 
 window.addEventListener('click', function(e) {
+    // target
     if (e.target === modalContainer) {
         modalContainer.style.display = 'none';
     }

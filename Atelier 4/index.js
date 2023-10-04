@@ -8,10 +8,10 @@ mybutton.forEach(function(button) {
         mydiv.classList.add("cercle");
 
         setInterval(() => {
-            
-        }, interval);(function() {
-            mydiv.classList.remove("cercle");
-            mydiv.style.borderRaduis = "10px"
-        }, 1500)
+            setInterval(function() {
+                mydiv.classList.remove("cercle");
+                mydiv.style.borderRaduis = "10px"
+            }, 1500)
+        },)
     })
 })

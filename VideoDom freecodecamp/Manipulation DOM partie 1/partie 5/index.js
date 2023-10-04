@@ -1,4 +1,4 @@
-
+// biomo
 window.addEventListener("click", function() {
   console.log("window")
 }, false);
