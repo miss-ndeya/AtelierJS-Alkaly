@@ -39,25 +39,26 @@ function afficherUtilisateur(utilisateur) {
     <td style="cursor: pointer"><button onclick='supprimer(event)' class="btn bg-danger text-white">Supprimer</button></td>
   </tr>`;
 }
-
+// let prenom 
 function modifier(id) {
   let utilisateur = utilisateurs.find((utilisateur) => utilisateur.id === id);
-
   document.getElementById("prenom").value = utilisateur.prenom;
   document.getElementById("nom").value = utilisateur.nom;
   document.getElementById("email").value = utilisateur.email;
-  document.getElementById("telephone").value = utilisateur.telephone;
+  document.getElementById("telephone").value = utilisateur.telephone
 
   btnAjouter.style.display = "none";
   btnModifier.style.display = "block";
 
   btnModifier.addEventListener('click', () => {
-      utilisateur.prenom = document.getElementById("prenom").value;
-      console.log(utilisateur.prenom);
+    if(btnModifier.style.display == 'block') {
+      prenom.textContent = utilisateur.prenom 
       utilisateur.nom = document.getElementById("nom").value;
       utilisateur.email = document.getElementById("email").value;
       utilisateur.telephone = document.getElementById("telephone").value;
-
+    }
+      localStorage.setItem("utilisateurs", JSON.stringify(utilisateurs));
+      afficherUtilisateur(utilisateur);
       document.querySelector("form").reset();
       btnModifier.style.display = "none";
       btnAjouter.style.display = "block";
@@ -67,3 +68,4 @@ function modifier(id) {
 function supprimer(event) {
   event.target.parentNode.parentNode.remove();
 }
+//  window.localStorage.clear(utilisateurs)
