@@ -57,33 +57,98 @@ for (let i = 0; i <= 10; i++) {
 }
 
 // En utilisant la boucle, imprimez le motif suivant
-motif = ''
+motif = "";
 
-for(let i = 0; i <= 10; i++) {
-  let double = i * i 
-  let triple = i * i * i
-  motif = `${i} * ${double} = ${triple}`
+for (let i = 0; i <= 10; i++) {
+  let double = i * i;
+  let triple = i * i * i;
+  motif = `${i} * ${double} = ${triple}`;
   console.log(motif);
 }
 
 // Utilisez la boucle for pour parcourir de 0 à 100 et imprimer uniquement les nombres pairs
-for(let i = 0; i <= 100; i++) {
+for (let i = 0; i <= 100; i++) {
   if (i % 2 === 0) {
     console.log(i, "pair");
   }
 }
 
 // Utilisez la boucle for pour parcourir de 0 à 100 et imprimer uniquement les nombres impairs
-for(let i = 0; i <= 100; i++) {
+for (let i = 0; i <= 100; i++) {
   if (i % 2 !== 0) {
     console.log(i, "impairs");
   }
 }
 
-
 // Utilisez la boucle for pour parcourir de 0 à 100 et imprimer la somme de tous les nombres.
-let sum = 0
-for(let i = 0; i <= 100; i++) {
-  sum += i
+let sum = 0;
+for (let i = 0; i <= 100; i++) {
+  sum += i;
 }
-console.log("The sum of all numbers from 0 to 100 is", sum, ".") ;  
+console.log("The sum of all numbers from 0 to 100 is", sum, ".");
+
+// Utilisez la boucle for pour parcourir de 0 à 100 et imprimer
+// la somme de tous les pairs et la somme de toutes les cotes.
+sum = 0;
+let summs = 0;
+
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 === 0) {
+    sum += i;
+  } else {
+    summs += i;
+  }
+}
+
+console.log(
+  "The sum of all evens from 0 to 100 is " +
+    sum +
+    "." +
+    " And the sum of all odds from 0 to 100 is " +
+    summs +
+    "."
+);
+
+// Utilisez la boucle for pour parcourir de 0 à 100 et imprimer la somme de tous
+// les pairs et la somme de toutes les cotes. Imprimer la somme des pairs et
+// la somme des cotes sous forme de tableau
+
+console.log([sum, summs]);
+
+// Développer un petit script qui génère un tableau de 5 nombres aléatoires
+let tableau = [];
+
+for (let i = 0; i < 5; i++) {
+  let tab = Math.floor(Math.random() * 12);
+  tableau.push(tab);
+}
+
+console.log(tableau);
+
+// Développez un petit script qui génère un identifiant aléatoire à six caractères :
+tableau = ''
+const caracteres = "6uytr0_+#2>/?"
+
+for (let i = 0; i < 6; i++) {
+  let tab = Math.floor(Math.random() * caracteres.length);
+  tableau += caracteres[tab]
+}
+console.log(tableau);
+
+// Développer un petit script qui génère un tableau de 5 nombres aléatoires et les nombres doivent être uniques
+tableau = []
+
+for (let i = 0; i < 5 ;) {
+
+  let tab = Math.floor(Math.random() * 120) ;
+
+  if (!tableau.includes(tab)) {
+    tableau.push(tab);
+    i++
+  } 
+}
+console.log(tableau);
+
+
+
+
