@@ -8,7 +8,7 @@ let modifierUtilisateur = "";
 window.onload = rechargerPage();
 
 function rechargerPage() {
-  if (utilisateurs) {
+  if (utilisateurs.length) {
     container.innerHTML = "";
     utilisateurs.forEach((utilisateur) => {
       afficherUtilisateur(utilisateur);
@@ -32,14 +32,11 @@ document.querySelector("form").addEventListener("submit", (e) => {
     utilisateur.email &&
     utilisateur.telephone
   ) {
-    document.querySelector(".alert").style.display = "none";
     utilisateurs.push(utilisateur);
     localStorage.setItem("utilisateurs", JSON.stringify(utilisateurs));
     afficherUtilisateur(utilisateur);
     document.querySelector("form").reset();
-  } else {
-    document.querySelector(".alert").style.display = "block";
-  }
+  } 
 });
 
 function afficherUtilisateur(utilisateur) {
@@ -92,6 +89,9 @@ btnModifier.addEventListener("click", () => {
 
 function supprimer(id) {
   utilisateurs = utilisateurs.filter((utilisateur) => utilisateur.id !== id);
-  rechargerPage();
   localStorage.setItem("utilisateurs", JSON.stringify(utilisateurs));
+  rechargerPage();
 }
+
+// window.localStorage.clear()
+
