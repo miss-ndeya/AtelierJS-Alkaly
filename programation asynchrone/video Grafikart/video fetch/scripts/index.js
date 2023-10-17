@@ -6,6 +6,20 @@ async function fetchUsers() {
     throw new Error('Imposssible de contacter le serveur')
 }
 fetchUsers().then(users => console.log(users))
-// fetch('https://jsonplaceholder.typicode.com/users')
-// .then(r => r.json())
-// .then(body => console.log(body))
+
+
+
+/*
+const img = document.getElementById("img");
+
+fetch("https://api.thecatapi.com/v1/images/search")
+  .then((res) => {
+    if (res.ok) {
+      res.json().then(data => {
+        img.src = data[0].url
+      })
+    } else {
+        document.getElementById("erreur").innerHTML = "Erreur :("
+    }
+  })
+  */
