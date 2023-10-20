@@ -1,4 +1,4 @@
-const url = "https://jsonplaceholder.typicode.com/todo";
+const url = "https://jsonplaceholder.typicode.com/todos";
 
 async function fetchTodos() {
   const res = await fetch(url);
