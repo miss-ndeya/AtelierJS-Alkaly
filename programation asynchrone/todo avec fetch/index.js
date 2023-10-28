@@ -1,4 +1,4 @@
-const url = "https://jsonplaceholder.typicode.com/todos";
+const url = "data.json";
 const notification = document.getElementById("notification");
 const containercomplet = document.getElementById("containercomplet");
 const retour = document.getElementById("retour");
@@ -29,7 +29,7 @@ async function fetchTodos(completed) {
         row.innerHTML = `
                 <td onClick="details(${todo.id})">${todo.title}</td>
                 <td>
-                    <button class='btn-primary complete'>not complete</button>
+                    <button class='btn-primary complete'>${todo.completed=== true ? "completed" : "not completed"}</button>
                 </td>
             `;
         containercomplet.appendChild(row);

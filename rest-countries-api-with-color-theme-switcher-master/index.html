@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/00ec292487.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Rest Countries</title>
+  </head>
+  <body class="light">
+    <header class=" pt-3 p-2 px-0 fixed-top  elements">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="fw-bolder fs-6 fs-lg-1">Where in the World?</h1>
+        <button class="border-0 elements m-0 p-0 pb-2  btnTheme fw-bold">
+          <i class="fa-regular bg-transparent fa-moon fs-6 fs-lg-5 me-2 mt-0"></i>Light Mode
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="container my-5 pt-4">
+        <div class="row mt-0 mt-lg-4">
+          <form id="form"
+            class=" d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-between"
+          >
+            <input id="input"
+              type="text"
+              class="elements border-0 mb-3 mb-lg-0  col-9 p-2 p-lg-3  col-lg-3"
+              placeholder="Search for a country..."
+            />
+            <p class="nontrouver"></p>
+            <select
+              name="filter"
+              class="elements col-lg-2 border-0 p-2 p-lg-3"
+              id="filter"
+            >
+              <option class="col-1" value="tout">Filter by Region</option>
+              <option class="col-1" value="Africa">Africa</option>
+              <option class="col-1" value="Americas">Americas</option>
+              <option class="col-1" value="Asia">Asia</option>
+              <option class="col-1" value="Europe">Europe</option>
+              <option class="col-1" value="Oceania">Oceania</option>
+            </select>
+          </form>
+        </div>
+
+        <div class="row list-country align-items-start align-items-lg-center  gy-5 gx-0 gx-lg-5 my-1 my-lg-0"></div>
+        <p id="erreur" class="text-center text-danger fs-2"></p>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
